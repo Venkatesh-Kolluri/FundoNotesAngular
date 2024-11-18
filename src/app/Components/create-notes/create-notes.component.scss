@@ -1,0 +1,86 @@
+
+.takeNotes-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left:150px;
+    width: 45%;
+    height: 100%;
+    box-shadow: 0 2px 4px lightgray;
+    border-radius: 5px;
+}
+.takeNotesInput{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    background-color:white;
+   
+}
+.notesbar {
+    padding:2px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color:white;
+    font-size: 20px;
+}
+.inputNotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left:150px;
+    width: 45%;
+    height: 200%;
+    // box-shadow: 0 2px 4px lightgray;
+    // border-radius: 10px;
+}
+
+.inputNotes1{
+    padding: 20px;
+    width: 100%;
+    display: block;
+    height: 100%;
+    border-radius: 15px;
+    background-color:white;
+
+}
+.centered-notes-bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+   
+}
+.title{
+    padding: 10px;
+    width: 95%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.takeanote{
+    padding: 10px;
+    width: 95%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.take-Note-openImages {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.close-button-div{
+    margin-left: 300px;
+}

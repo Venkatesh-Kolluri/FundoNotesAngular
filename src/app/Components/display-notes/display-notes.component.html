@@ -1,0 +1,26 @@
+<div class="card-Container" *ngFor="let notes of noteList">
+    <div class="card-wrapper">
+      <mat-card class="mat-mdc-card" [style.background-color]="notes.color">
+        <button mat-icon-button matTooltip="Pin Note" class="checkbox">
+          <img src="../../../assets/Images/checked.png">
+        </button>
+        <mat-card-title class="notes-title">
+          <div class="title" style="display: flex;" (click)="UpdateNoteDialog(notes)">
+            <div class="notesTitle">
+              {{ notes.title }}
+            </div>
+            <button mat-icon-button matTooltip="Pin Note" class="keepButton">
+              <img src="../../../assets/Images/keep_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+            </button>
+          </div>   
+        </mat-card-title>
+        <mat-card-content class="notes-body" (click)="UpdateNoteDialog(notes)">
+          <div>{{ notes.note }}</div>
+        </mat-card-content>
+        <div class="notes-icons">
+          <app-icon [notesObject]="notes"></app-icon>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  

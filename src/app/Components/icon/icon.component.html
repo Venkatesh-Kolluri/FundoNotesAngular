@@ -1,0 +1,37 @@
+<div class="imagesMenu">
+    <button mat-icon-button matTooltip="Reminder" class="imageIcon">
+        <img src="../../../assets/Images/add_alert_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Reminder">
+    </button>
+    <button mat-icon-button matTooltip="Collaborator" class="imageIcon">
+        <img src="../../../assets/Images/person_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Collaborator">
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="colorMenu" matTooltip="Background Options" class="imageIcon">
+        <img src="../../../assets/Images/palette_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Edit">
+    </button>
+    <button mat-icon-button matTooltip="Add Image" class="imageIcon">
+        <img src="../../../assets/Images/image_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Palette">
+    </button>
+    <button mat-icon-button matTooltip="Archive" class="imageIcon" (click)="onArchive()">
+        <img src="../../../assets/Images/archive.png" alt="Add alert" >
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="moreMenu" matTooltip="More" class="imageIcon">
+        <img src="../../../assets/Images/more_vert_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="more">
+    </button>
+</div>
+
+<mat-menu #moreMenu="matMenu" class="menu">
+    <button mat-menu-item (click)="trash()">Delete note</button>
+    <button mat-menu-item>Add label</button>
+    <button mat-menu-item>Add drawing</button>
+    <button mat-menu-item>Make a copy</button>
+    <button mat-menu-item>Show checkboxes</button>
+</mat-menu>
+<div class="colorMenu">
+    <mat-menu #colorMenu="matMenu" xPosition="before" class="colorPalette" >
+        <div *ngFor="let colors of colorArray" class="colorDiv">
+            <button class="colorIcon" [style.background]="colors.code" (click)="selectColor(colors)" ></button>
+        </div>
+    </mat-menu>
+</div>
+
+

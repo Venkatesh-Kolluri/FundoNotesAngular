@@ -1,0 +1,28 @@
+<div class="card-container">
+    <div class="logo-container">
+        <img src="../../../assets/Images/GoogleLogo" id="logo-image" alt="Logo">
+    </div>
+    <h2 class="title">Create Account</h2>
+    <form [formGroup]="RegisterUser" (ngSubmit)="Create()">
+        <div class="form-container">
+            <mat-form-field appearance="outline" class="input-field" id="firstName">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First Name" type="text" formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="input-field" id="lastName">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last Name" type="text" formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="input-field" id="email">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="input-field" id="password">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" type="password" formControlName="password">
+            </mat-form-field>
+            <!-- <button mat-button color="primary" class="create-btn">back</button>   -->
+            <button mat-raised-button color="primary" class="sign-in-btn">Create</button>
+        </div>
+    </form>
+</div>

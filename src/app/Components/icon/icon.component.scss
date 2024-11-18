@@ -1,0 +1,19 @@
+.imagesMenu{
+    display: flex;
+}
+
+.colorMenu{
+    display: flex;
+}
+
+.colorDiv{
+    display: inline-flex;
+    width:35px;
+}
+.colorIcon {
+    display: flex;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%; 
+}

@@ -1,0 +1,25 @@
+<div class="inputNotes">
+    <!-- <form [formGroup]="inputNotesForm" (ngSubmit)="submitNotes()"> -->
+        <div class="inputNotes1">
+            <div class="centered-notes-bar">
+                <input class="title" type="text" [(ngModel)]="title">
+                <button mat-icon-button matTooltip="Pin Note" class="notesButton search-icon-button">
+                    <img class="notesImage1"
+                        src="../../../assets/Images/keep_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+                </button>
+            </div>
+            <div class="take-Note-open">
+                <input class="takeanote" type="text" [(ngModel)]="note">
+            </div>
+            <div class="take-Note-openImages">
+                <app-icon></app-icon>
+                <div class="close-button-div">
+                    <button mat-icon-button class="close-button" style="font-size: medium; margin-left: -100px;"
+                    (click)="closeDialog()" >
+                        close
+                    </button>
+                </div>
+            </div>
+        </div>
+    <!-- </form> -->
+</div>

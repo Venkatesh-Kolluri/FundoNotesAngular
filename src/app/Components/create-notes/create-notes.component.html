@@ -1,0 +1,56 @@
+<div class="card-Container">
+    <div *ngIf="display; then takeNotes else inputNotes"></div>
+
+    <ng-template #takeNotes>
+        <div class="takeNotes-container">
+            <div class="takeNotesInput">
+                <input class="notesbar" type="text" placeholder="Take a note..." (click)="display = !display">
+                <button mat-icon-button matTooltip="New List" class="notesButton search-icon-button">
+                    <img class="notesImage"
+                        src="../../../assets/Images/check_box_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+                </button>
+                <button mat-icon-button matTooltip="New Note with Drawing" class="notesButton search-icon-button">
+                    <img class="notesImage"
+                        src="../../../assets/Images/brush_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+                </button>
+                <button mat-icon-button matTooltip="New Note with Image" class="notesButton search-icon-button">
+                    <img class="notesImage"
+                        src="../../../assets/Images/image_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+                </button>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #inputNotes>
+        <div class="inputNotes">
+            <form [formGroup]="inputNotesForm" (ngSubmit)="submitNotes()">
+                <div class="inputNotes1">
+                    <div class="centered-notes-bar">
+                        <input class="title" type="text" placeholder="Title" formControlName="title">
+                        <button mat-icon-button matTooltip="Pin Note" class="notesButton search-icon-button">
+                            <img class="notesImage1"
+                                src="../../../assets/Images/keep_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+                        </button>
+                    </div>
+                    <div class="take-Note-open">
+                        <input class="takeanote" type="text" placeholder="Take a note..." formControlName="takenote">
+                    </div>
+                    <div class="take-Note-openImages">
+                        <app-icon></app-icon>
+                        <!-- <button mat-icon-button>
+                        <img src="../../../assets/undo_24dp_5_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </button>
+                    <button mat-icon-button>
+                        <img src="../../../assets/redo_24dp_5_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </button> -->
+                        <div class="close-button-div">
+                            <button mat-icon-button class="close-button" style="font-size: medium; margin-left: -100px;"
+                                (click)="display = !display">
+                                close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+</div>

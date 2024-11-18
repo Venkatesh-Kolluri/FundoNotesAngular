@@ -1,0 +1,33 @@
+<!-- <app-display-notes [noteList]="trashList" style="display: flex; flex-wrap: wrap;"></app-display-notes> -->
+<div class="card-Container" *ngFor="let notes of trashList">
+    <div class="card-wrapper">
+      <mat-card class="mat-mdc-card">
+          <button mat-icon-button matTooltip="Pin Note" class="checkbox">
+              <img src="../../../assets/Images/checked.png">
+          </button>
+          <mat-card-title class="notes-title">
+              <div class="title" style="display: flex;" >
+                  <div class="notesTitle">
+                      {{notes.title}}
+                  </div>
+                  <button mat-icon-button matTooltip="Pin Note" class="keepButton">
+                      <img src="../../../assets/Images/keep_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+                  </button>
+              </div>   
+          </mat-card-title>
+          <mat-card-content class="notes-body">
+              <div>{{notes.note}}</div>
+          </mat-card-content>
+          <div class="notes-icons">
+            <div class="imagesMenu">
+                <button mat-icon-button matTooltip="Delete Forever" class="imageIcon">
+                    <img src="../../../assets/Images/delete_forever_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Reminder">
+                </button>
+                <button mat-icon-button matTooltip="Restore" class="imageIcon">
+                    <img src="../../../assets/Images/restore_from_trash_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="Collaborator">
+                </button>
+            </div>
+          </div>
+      </mat-card>
+    </div>
+  </div>

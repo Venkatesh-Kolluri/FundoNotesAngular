@@ -1,0 +1,22 @@
+<div class="card-container">
+    <div class="logo-container">
+        <img src="../../../assets/Images/GoogleLogo" id="logo-image" alt="Logo">
+    </div>
+    <h2 class="title">Sign In</h2>
+    <div class="form-container">
+         <form [formGroup]="LoginForm" (ngSubmit)="Login()">           
+            <mat-form-field appearance="outline" class="input-field">
+                <mat-label>Email or Phone</mat-label>
+                <input matInput placeholder="Email or Phone" formControlName="email" >
+            </mat-form-field>
+            <button mat-button color="primary" class="forgot-btn">Forgot Email?</button>     
+            <mat-form-field appearance="outline" class="input-field">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" type="password" formControlName="password">
+            </mat-form-field>   
+            <button mat-button color="primary" class="forgotPassword-btn">Forgot Password?</button>     
+            <button mat-button color="primary" class="create-btn">Create account</button>  
+            <button mat-raised-button color="primary" class="sign-in-btn">Log In</button>
+       </form>
+    </div>
+</div>

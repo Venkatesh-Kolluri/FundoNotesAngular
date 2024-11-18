@@ -1,0 +1,88 @@
+<mat-toolbar style="background-color: white; border-bottom: 1px solid whitesmoke; ">
+    <mat-toolbar-row>
+        <div class="dashboard-Container">
+            <button mat-icon-button matTooltip="Main Menu" (click)="sidenav.toggle()">
+                <img src="../../../assets/Images/menu.png">
+            </button>
+            <img src="../../../assets/Images/icons8-google-keep-new-48.png">
+            <span>Keep</span>
+        </div>
+        <div class="dashboard-Container1">
+           <div class="search-bar">
+            <button mat-icon-button>
+                <img src="../../../assets/Images/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" alt="searchIcon">
+            </button>
+            <input type="text" name="" id="inputid" placeholder="Search">
+           </div>
+        </div>
+        <div class="dashboard-container2">
+            <button mat-icon-button matTooltip="Refresh" aria-label="refresh">
+                <img src="../../../assets/Images/refresh.png">
+            </button>
+            <button mat-icon-button matTooltip="List View" aria-label="View menu">
+                <img src="../../../assets/Images/view_agenda_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+            </button>
+            <button mat-icon-button matTooltip="Settings" aria-label="settings">
+                <img src="../../../assets/Images/settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+            </button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="sidebar-container">
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav opened="true" mode="side" class="sidenav">
+            <mat-nav-list >
+                <a mat-list-item >
+                  <div class="mat-class">
+                    <img class="img-class" src="../../../assets/Images/lightbulb_2_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png"
+                      alt="">
+                    <span class="notes-class" >Notes</span>
+                  </div>
+                </a>
+                <a mat-list-item>
+                    <div class="mat-class">
+                      <img class="img-class" src="../../../assets/Images/notifications.png" alt="">
+                      <span class="notes-class">
+                       Reminder
+                      </span>
+                    </div>
+                  </a>
+                <a mat-list-item>
+                  <div class="mat-class"> <img  class="img-class" src="../../../assets/Images/edit.png"
+                      alt="">
+                    <span class="notes-class">
+                      Edit Labels
+                    </span>
+                  </div>
+                </a>
+                <a mat-list-item>
+                  <div class="mat-class"> <img class="img-class" src="../../../assets/Images/archive.png"
+                      alt="">
+                    <span class="notes-class">
+                     Archive
+                    </span>
+                  </div>
+                </a>
+                <a mat-list-item>
+                  <div class="mat-class"> <img class="img-class" src="../../../assets/Images/delete_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png"
+                      alt="">
+                    <span class="notes-class">
+                      Trash
+                    </span>
+                  </div>
+                </a>
+                </mat-nav-list>
+        </mat-sidenav>
+       
+       
+        <mat-sidenav-content class="content">
+            <div style="height: 88vh;margin-top: 25px; padding-left: 100px;">
+             <router-outlet></router-outlet>
+                  
+            </div>
+          
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+  
+</div>
